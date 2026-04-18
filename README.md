@@ -1,45 +1,114 @@
-# Hand-Gesture-Presentation-Controller
-The Hand Gesture Presentation Controller project is focused on creating an innovative way to control PowerPoint presentations using hand gestures. Leveraging computer vision techniques, this project utilizes the cvzone.handTracking module along with cv2 (OpenCV) to detect and track hand movements, enabling seamless control of presentation slides without the need for traditional input devices. The project also integrates tkinter for creating a user-friendly interface and os and spire.Presentation libraries for converting PowerPoint slides into .png images for gesture-based navigation.
+# Hand Gesture Presentation Controller
 
-Objectives:
+## Overview
+This project enables users to control PowerPoint presentations using hand gestures detected through a webcam. It uses computer vision techniques to track hand movements and map them to presentation controls, eliminating the need for traditional input devices such as a mouse or keyboard.
 
-To develop a system that tracks and interprets hand gestures using a webcam to control the flow of a PowerPoint presentation.
-To convert PowerPoint slides into images (.png format) using the spire.Presentation library, making them accessible for gesture-based control.
-To create an intuitive graphical user interface (GUI) using tkinter for easy interaction and control of the application.
-To ensure smooth and responsive slide transitions based on specific hand gestures, such as swiping left or right to change slides.
-To test and validate the system in various lighting conditions and with different users to ensure robustness and accuracy.
+The system converts presentation slides into images and allows users to navigate through them using predefined gestures, providing an intuitive and touch-free interaction experience.
 
-Key Features:
+---
 
-Hand Gesture Detection and Tracking:
+## Objectives
 
-Utilized cvzone.handTracking and cv2 (OpenCV) to detect and track hand gestures in real-time.
-Implemented gesture recognition logic to map specific hand movements to presentation control actions (e.g., swiping to change slides).
+- Develop a system to detect and interpret hand gestures in real time  
+- Enable gesture-based navigation of presentation slides  
+- Convert PowerPoint slides into image format for processing  
+- Build a user-friendly interface for controlling the application  
+- Ensure smooth and responsive gesture recognition  
 
-Hand Gestures Used: 
-Move to Next Slide: Thumb to the CAMERA [1,0,0,0,0]
-Move to Prev Slide: Pnky Finger to the CAMERA [0,0,0,0,1]
-Move to last Slide: Both Ring Finger and Pinky Finger to the CAMERA [0,0,0,1,1]
-Control Pointer: Both Index Finger and Middle Finger to the CAMERA [0,1,1,0,0]
-Access Pointer: Index Finger to the CAMERA [0,1,0,0,0]
-Clear last action: Combination of Index, Middle, Ring Finger to the CAMERA [0,1,1,1,0]
-Clear Screen: All Fingers (EXCEPT THUMB) to CAMERA [0,1,1,1,1]
+---
 
+## Features
 
-Slide Conversion and Management:
+### Hand Gesture Detection and Control
+- Real-time hand tracking using webcam input  
+- Gesture recognition mapped to presentation actions  
+- Smooth slide transitions using gesture commands  
 
-Used spire.Presentation to convert PowerPoint (.pptx) slides into .png image format, enabling them to be processed and displayed by the application.
-Managed slide navigation and display using os to ensure seamless slide transitions.
+### Supported Gestures
 
-User Interface:
+- Next Slide: [1, 0, 0, 0, 0]  
+- Previous Slide: [0, 0, 0, 0, 1]  
+- Last Slide: [0, 0, 0, 1, 1]  
+- Pointer Control: [0, 1, 1, 0, 0]  
+- Activate Pointer: [0, 1, 0, 0, 0]  
+- Clear Last Action: [0, 1, 1, 1, 0]  
+- Clear Screen: [0, 1, 1, 1, 1]  
 
-Developed a user-friendly GUI using tkinter to allow users to start, pause, and stop the presentation control system easily.
-Provided options to select the PowerPoint file, adjust settings, and view real-time gesture detection feedback.
+---
 
-Tools and Technologies:
+### Slide Processing
+- Converts PowerPoint (.pptx) slides into image format (.png)  
+- Enables efficient rendering and navigation of slides  
 
-Programming Language: Python
+---
 
-Libraries: cvzone, cv2 (OpenCV), os, tkinter, spire.Presentation
+### User Interface
+- GUI built using tkinter  
+- Options to start, pause, and stop the system  
+- File selection for PowerPoint input  
+- Real-time gesture feedback  
 
-Environment: VS Code
+---
+
+## Tech Stack
+
+- Python  
+- OpenCV (cv2)  
+- cvzone  
+- tkinter  
+- spire.Presentation  
+- os  
+
+---
+
+## Project Workflow
+
+1. Load PowerPoint file  
+2. Convert slides into image format  
+3. Capture webcam input  
+4. Detect and track hand gestures  
+5. Map gestures to presentation controls  
+6. Display slides and update based on gestures  
+
+---
+
+## Use Cases
+
+- Touchless presentation control  
+- Smart classrooms and presentations  
+- Assistive technology for hands-free interaction  
+- Computer vision-based application development  
+
+---
+
+## How to Run
+
+1. Clone the repository  
+```
+git clone https://github.com/Nicknishchal/Hand-Gesture-Presentation-Controller.git
+```
+
+2. Navigate to the project folder  
+```
+cd Hand-Gesture-Presentation-Controller
+```
+
+3. Install required libraries  
+```
+pip install -r requirements.txt
+```
+
+4. Run the main Python file  
+
+---
+
+## Contact
+
+Email: saxenanishchal275@gmail.com  
+LinkedIn: https://www.linkedin.com/in/nishchal-saxena-49551a271/
+
+---
+
+## Contribution
+
+Contributions are welcome. Feel free to open issues or submit pull requests.
